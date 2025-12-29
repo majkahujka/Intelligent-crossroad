@@ -12,6 +12,6 @@ POUŽITÉ KOMPONENTY:
 ESP32,
 Ardurino Mega 2560,
 RGB LED,
-LEd chodci,
+Led chodci,
 tlačidlá,
 vodiče.
