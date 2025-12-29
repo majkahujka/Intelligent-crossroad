@@ -22,8 +22,8 @@ Led chodci,
 tlačidlá,
 vodiče.
 # 4. Použitý softvér
-Arduino IDE 
-Programovací jazyk C/C++ (Arduino)
-IoT platforma Blynk – vzdialené zobrazovanie nameraných hodnôt
-Wi-Fi pripojenie – komunikácia medzi zariadením a cloudom
+Arduino IDE,
+Programovací jazyk C/C++ (Arduino),
+IoT platforma Blynk – vzdialené zobrazovanie nameraných hodnôt,
+Wi-Fi pripojenie – komunikácia medzi zariadením a cloudom.
 
