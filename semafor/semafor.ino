@@ -1,5 +1,4 @@
 #include <Wire.h>
-#include "RTClib.h"
 
 // =================== TLACIDLA – 4 PRERUSENIA ====================
 const byte button1Pin  = 2;   // externé prerušenie
@@ -20,10 +19,6 @@ bool stav3 = false;
 // =================== SEMAFORY A LEDKY ====================
 int cas  = 1000;
 int cas1 = 5000;
-
-// =================== RTC ====================
-RTC_DS3231 rtc;
-String serialBuffer = "";
 
 // =================== SETUP ====================
 void setup() {
@@ -50,7 +45,6 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(button3Pin), onButton3Interrupt, RISING);
   attachInterrupt(digitalPinToInterrupt(button4Pin), onButton4Interrupt, RISING);
 
-  Serial.println("System start. Prikazy: tHH:MM:SSdDD.MM.RRRR alebo a");
   digitalWrite(28,HIGH);
   digitalWrite(29,HIGH);
   
@@ -66,7 +60,6 @@ void onButton4Interrupt() { button4Pressed = true; }
 // =================== LOOP ====================
 void loop() {
 
-  readSerialCommands();
   handleButtons();
 
   if(analogRead(A0) > 500)
@@ -78,10 +71,8 @@ void loop() {
   {
     handleButtons();
     scenar1();
-    readSerialCommands();
     handleButtons();
     scenar2();
-    readSerialCommands();
     handleButtons();
     scenar3();
   }  
@@ -92,7 +83,7 @@ void handleButtons() {
   if (button1Pressed) {
     button1Pressed = false;
     stav0 = true;
-    // Sem môžeš napr. volať nejaku akciu: SEM1(stav0);
+    // Sem môžem napr. volať nejaku akciu: SEM1(stav0);
   }
 
   if (button2Pressed) {
