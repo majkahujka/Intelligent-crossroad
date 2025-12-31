@@ -26,4 +26,6 @@ Arduino IDE,
 Programovací jazyk C/C++ (Arduino),
 IoT platforma Blynk – vzdialené zobrazovanie nameraných hodnôt,
 Wi-Fi pripojenie – komunikácia medzi zariadením a cloudom.
-
+# 5. Odkazy na inšpiráciu 
+https://www.youtube.com/watch?v=W1xG_XJb0FU , 
+https://fra1.blynk.cloud/dashboard/160369/templates/312145/info
